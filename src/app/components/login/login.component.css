@@ -1,0 +1,52 @@
+html, body, .login, app-root, app-login {
+  height: 100% !important;
+}
+
+/* Style Guide */
+
+/* Login Form Styles */
+.form-login {
+  width: 100%;
+  max-width: 280px;
+  padding: 15px;
+  margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px grey;
+}
+.form-login form {
+    padding: 5px;
+}
+.form-login label{
+  font-size: 0.7rem;
+}
+.form-login .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 3px 10px;
+  font-size: 12px;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #ebebeb;
+	border-radius: 0;
+}
+.form-login .has-error .form-control{
+  border-color: #a94442;
+}
+.form-login .form-control:focus {
+  z-index: 2;
+}
+.form-login input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-login input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-login .btn-login{
+	margin-top: 30px;
+}

@@ -1,0 +1,47 @@
+<div class='prefarencePage'>
+  <div class="page-container">
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+          <h3 class="page-header">Timeslice</h3>
+      </div>
+
+      <div class="col-md-8 view-buttons dateRange">
+          <label id="dateSelect">
+          <label><b>View:</b></label>
+          <!-- <label><a href="#" class="active">1HR</a></label> -->
+          <label><a href="#" id="d1" class="rangeSel">1D</a></label>
+          <label><a href="#" id="w1" class="rangeSel">1W</a></label>
+          <label><a href="#" id="m1" class="rangeSel">1M</a></label>
+          <label><a href="#" class="btn btn-green btn-today btn-primary" id="d_1">Today</a></label>
+          <div class="btn-group" role="group">
+             <button type="button" class="btn btn-arrow"><i class="fas fa-caret-left"></i></button>
+             <button type="button" class="btn btn-arrow"><i class="fas fa-caret-right"></i></button>
+          </div>
+          </label>
+
+      </div>
+    </div>
+
+  </div>
+    <div class="page-block">
+      <div class="page-content">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-10">
+            <table class="table">
+              <tr>
+                <th>Events</th>
+                <td *ngFor="let val of dateData.date; let i = index" id={{i}}>{{val}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

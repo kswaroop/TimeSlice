@@ -1,0 +1,30 @@
+<div class='prefarencePage container-fluid'>
+  <div class="page-container">
+    <h3 class="page-header">Preferences</h3>
+    <div class="page-block">
+      <h4 class="page-title">Select the event you wish to include:</h4>
+      <div class="page-content">
+        <div class="row">
+           <div class='col-md-3 col-header'><i class="fa fa-bullhorn fa-sm"> </i> MARKETING</div>
+           <div class='col-md-3 col-header'><i class="far fa-money-bill-alt fa-sm"> </i> FINANCIALS</div>
+           <div class='col-md-3 col-header'><i class="fa fa-cogs fa-sm"> </i> OPERATIONS</div>
+           <div class='col-md-3 col-header'><i class="fa fa-truck fa-sm"> </i> SUPPLY CHAIN</div>
+           <div class="col-md-3 preferences-list" *ngFor="let val of prefernceArray">
+              <ul *ngFor="let val1 of val" class="">
+                 <li >
+                    <input [checked]=false (click)='selectedprefernce($event)' value={{val1}} type="checkbox" /> {{val1}}
+                 </li>
+              </ul>
+           </div>
+        </div>
+        <div class="btn-container">
+           <button type="submit" id='save'class="btn btn-primary btn-save" (click)="prefernceSelected();">Save</button>
+           <button type="submit" id='cancel'class="btn btn-secondary btn-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

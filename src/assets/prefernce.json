@@ -1,0 +1,7 @@
+
+{
+	"marketing": ["sales", "siteTraffic", "storeTraffic", "conversion"],
+	"financials": ["promotions", "campaigns", "promotion1", "promotion2"],
+	"operations": ["promotion3", "promotion4", "promotion5", "promotion6"],
+	"supplychain": ["merch Promotion1", "merch Promotion2", "merch Promotion3", "merch Promotion4"]
+}

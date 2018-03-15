@@ -1,0 +1,107 @@
+/* Custom Bootstrap 4 styles */
+
+
+body {
+    font-family: avenir;
+    background-color: #fafbfc;
+}
+
+body.login{
+  background-color: #333;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #FFA500;
+  border-color: #FFA500;
+  border-radius: 20px;
+  padding: 6px 45px;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #9B59B6;
+  border-color: #9B59B6;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #c6cbd4;
+  border-color: #c6cbd4;
+  border-radius: 20px;
+  padding: 6px 45px;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #727b84;
+  border-color: #6c757d;
+}
+
+.login {
+  height: 100% !important;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.login app-root, .login app-login{
+  width: 100%;
+}
+
+/* Error Styles */
+.has-error .help-block{
+  color: #a94442;
+  font-size: 0.7rem;
+}
+
+.has-error .form-control{
+  border-color: #a94442;
+}
+
+/* Page Heading styles */
+.page-header {
+  font-size: 1.5rem;
+  margin: 20px 0 20px 0px;
+}
+
+.page-block{
+  background-color: #fff;
+}
+
+.page-title{
+  padding: 20px;
+  border: 1px solid #EBEDF8;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.page-content{
+  padding: 20px;
+  border-style:  solid ;
+  border-color: #EBEDF8;
+  border-width: 0 1px 1px 1px;
+}
+
+/* Buttons */
+.btn-green{
+  background-color: #12CBC4;
+  border-color: #12CBC4;
+  color: #fff !important;
+}
+.btn-today{
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.btn-arrow{
+  border-color:#ccc;
+}
