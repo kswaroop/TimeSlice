@@ -1,3 +1,34 @@
-<p>
-  time-slice-table works!
-</p>
+<app-calender-navigation></app-calender-navigation>
+<div class="container-fluid">
+  <div class="row">
+     <table class="calTable table">
+          <tr *ngFor='let events of keyArray;let i=index' >
+            <table class="table">
+              <tr class="grey-td">
+                  <th class='events'>
+                      {{events}}
+                   </th>
+                   <ng-container *ngIf="i<1">
+                      <td *ngFor='let data of valueArray[i];let j=index' id='c{{i}}_r{{j}}' >
+                          {{data}}
+                        </td>
+                   </ng-container>
+                   
+                   <ng-container *ngIf="i>0">
+                      <td *ngFor='let data of valueArray[i];let j=index' (click)='showDetails($event)' id='c{{i}}_r{{j}}' >
+                          {{data}}
+                        </td>
+                   </ng-container>
+                   
+              </tr>
+              <tr>
+              <td id='c_{{i}}_toogle' class="loader_div" colspan="30"> this is the graph area
+
+                </td>
+              </tr>
+            </table>
+          </tr>
+        </table>
+  </div>
+</div>
+

@@ -1,7 +1,7 @@
 
 {
-	"marketing": ["sales", "siteTraffic", "storeTraffic", "conversion"],
-	"financials": ["promotions", "campaigns", "promotion1", "promotion2"],
-	"operations": ["promotion3", "promotion4", "promotion5", "promotion6"],
-	"supplychain": ["merch Promotion1", "merch Promotion2", "merch Promotion3", "merch Promotion4"]
+	"marketing": ["sales", "site traffic", "store traffic", "conversion"],
+	"financials": ["promotions", "campaigns", "promotion 1", "promotion 2"],
+	"operations": ["promotion 3", "promotion 4", "promotion 5", "promotion 6"],
+	"supplychain": ["merch promotion 1", "merch promotion 2", "merch promotion 3", "merch promotion 4"]
 }

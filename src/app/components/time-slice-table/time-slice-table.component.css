@@ -1,0 +1,54 @@
+
+  .calTable tr:first-child .table .grey-td .events{
+    border: none;
+    padding: 0;
+    line-height: 2.3em;
+    font-size: 11px;
+    font-weight: normal;
+  }
+  
+  
+  .table  td,  .table  th {
+	border: none;
+	padding: 0;
+	line-height: 2.3em;
+	text-align: center;
+	font-size: 11px;
+    font-weight: normal;
+    /* background-color: transparent!important; */
+}
+.table  td {
+    background-color: #f1f2f6;
+    padding: 0px;
+    text-align: center;
+    width: 35px;
+    vertical-align: middle
+}
+
+.table .grey-td td:nth-child(2){
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.table .grey-td td:last-child{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.table .grey-td th:first-child{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: left;
+    text-indent: 10px;
+    background-color: none;
+    width: 140px
+}
+table {
+    margin-bottom:10px;
+    
+}
+.table .table {
+    background-color: transparent;
+}

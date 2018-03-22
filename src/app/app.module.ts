@@ -15,7 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CalenderService } from './services/calender.service';
 import { PreferencesService } from './services/preferences.service';
 import { AppRoutingModule } from './app.routing';
-import { CalenderHeaderComponent } from './components/calender-header/calender-header.component'
+import { CalenderHeaderComponent } from './components/calender-header/calender-header.component';
+import { CalenderNavigationComponent } from './components/calender-navigation/calender-navigation.component';
+import { KeysPipe } from './keys.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,9 @@ import { CalenderHeaderComponent } from './components/calender-header/calender-h
     TimeSliceTableComponent,
     TimeSliceButtonComponent,
     CalenderComponent,
-    CalenderHeaderComponent
+    CalenderHeaderComponent,
+    CalenderNavigationComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,

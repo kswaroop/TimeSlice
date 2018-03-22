@@ -45,6 +45,6 @@ export class PreferenceComponent implements OnInit {
   prefernceSelected() {
     sessionStorage.setItem('pref', JSON.stringify(this.temp));
     console.log(sessionStorage.getItem('pref'));
-    this.router.navigate(['timeslice/calender']);
+    this.router.navigate(['timeslice/classic-view']);
   }
 }

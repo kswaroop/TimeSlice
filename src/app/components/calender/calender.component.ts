@@ -15,7 +15,7 @@ export class CalenderComponent implements OnInit {
   ngOnInit() {
   }
   getDateData() {
-    return this.CalenderService.dateData()
+    return this.CalenderService.tableData()
     .subscribe(data => {
       this.dateData = data;
       console.log(this.dateData.date);

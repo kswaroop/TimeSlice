@@ -18,7 +18,16 @@ const appRoutes: Routes = [
       { path: '', redirectTo: 'preference', pathMatch: 'full' },
       { path: 'preference', component: PreferenceComponent },
       { path: 'preferenceToggle', component: TimeSliceButtonComponent },
-      { path: 'calender', component: CalenderComponent },
+      { path: 'classic-view', component: TimeSliceTableComponent,
+      children: [
+        { path: '', redirectTo: 'month', pathMatch: 'full' },
+        { path: 'month', component: TimeSliceTableComponent },
+        { path: 'week', component: TimeSliceTableComponent },
+        { path: 'day', component: TimeSliceTableComponent },
+        
+      ]
+    }
+      
     ]
   }
 ];
