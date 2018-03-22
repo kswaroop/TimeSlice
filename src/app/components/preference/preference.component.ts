@@ -13,7 +13,7 @@ export class PreferenceComponent implements OnInit {
   prefernceArray: Array<String> = [];
   title = 'prakash';
   temp: Array<String> = [];
-  //test
+  // test
   constructor(private preferencesService: PreferencesService, private router: Router) {
     this.getPrefernceData();
    // this.prefernceSelected();

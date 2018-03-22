@@ -32,3 +32,11 @@
   </div>
 </div>
 
+  <circle-progress
+  [percent]="35"
+></circle-progress> 
+
+ 
+<angular-d3-bar #someInput [id]="test2" class='chartDiv' [data]="barChartData" [dataColumns]="dataColumns" [colors]="colors"  [width]=400
+    [height]=200 [transitionDuration]=1000 [transitionDelay]=30 [barWidth]="'12px'"></angular-d3-bar>
+

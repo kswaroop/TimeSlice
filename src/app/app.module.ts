@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { DoughnutChartComponent, PieChartComponent, BarChartComponent } from 'angular-d3-charts';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -17,8 +18,7 @@ import { PreferencesService } from './services/preferences.service';
 import { AppRoutingModule } from './app.routing';
 import { CalenderHeaderComponent } from './components/calender-header/calender-header.component';
 import { CalenderNavigationComponent } from './components/calender-navigation/calender-navigation.component';
-import { KeysPipe } from './keys.pipe';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +31,27 @@ import { KeysPipe } from './keys.pipe';
     CalenderComponent,
     CalenderHeaderComponent,
     CalenderNavigationComponent,
-    KeysPipe
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      'radius': 40,
+      'space': -10,
+      'outerStrokeWidth': 10,
+      'outerStrokeColor': '#FFA500',
+      'innerStrokeColor': '#ffc107',
+      'innerStrokeWidth': 10,
+      'animateTitle': false,
+      'animationDuration': 1000,
+      'showUnits': true,
+      'showBackground': true,
+      'clockwise': true
+    }),
   ],
   providers: [PreferencesService, CalenderService],
   bootstrap: [AppComponent]

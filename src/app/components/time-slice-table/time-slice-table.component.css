@@ -52,3 +52,9 @@ table {
 .table .table {
     background-color: transparent;
 }
+g.x.axis {
+    display: none !important;
+}
+g.y.axis {
+    display: none !important;
+}

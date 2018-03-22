@@ -24,10 +24,8 @@ const appRoutes: Routes = [
         { path: 'month', component: TimeSliceTableComponent },
         { path: 'week', component: TimeSliceTableComponent },
         { path: 'day', component: TimeSliceTableComponent },
-        
       ]
     }
-      
     ]
   }
 ];
