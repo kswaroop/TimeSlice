@@ -25,6 +25,7 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
   public chartData: Array<any> = [];
   public barChartData: Array<any>  = [];
   public barChartFlag: any = false;
+  public data: any = '';
   constructor(private CalService: CalenderService, private grapData: GraphDataService) {
     this.getPrefData();
     this.getTableData();
@@ -61,8 +62,9 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
   getGraphData() {
     return this.grapData.graphData()
     .subscribe(data => {
-       this.circleGraphData = data.Topic2;
-       this.chartData = data .Statistics;
+      this.data = data;
+       this.circleGraphData = this.data.Topic2;
+       this.chartData =  this.data .Statistics;
        this.chartData.forEach((item, index) => {
         const arr = {
           id: index,
