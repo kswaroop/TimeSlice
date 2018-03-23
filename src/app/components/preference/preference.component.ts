@@ -25,7 +25,7 @@ export class PreferenceComponent implements OnInit {
      // console.log($event.target.value);
      if ($event.target.checked && this.temp.indexOf($event.target.value) === -1) {
         this.temp.push($event.target.value);
-     }else {
+     } else {
       const index = this.temp.indexOf($event.target.value);
       this.temp.splice(index, 1);
      }
@@ -36,7 +36,7 @@ export class PreferenceComponent implements OnInit {
     .subscribe(data => {
       this.data = data;
       this.headerValue = Object.keys(data);
-      for (const prop of this.headerValue){
+      for (const prop of this.headerValue) {
        this.prefernceArray.push(this.data[prop]);
       }
       console.log(this.prefernceArray);

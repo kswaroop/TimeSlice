@@ -2,6 +2,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import {CalenderService} from './../../services/calender.service';
 import { forEach } from '@angular/router/src/utils/collection';
+import { GraphDataService } from '../../services/graph-data.service';
 
 
 @Component({
@@ -19,13 +20,20 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
   private toogleBox: any;
   private keyArray: Array<string> = [];
   private valueArray: Array<any> = [];
-  constructor(private CalService: CalenderService) {
+  private circleGraphData: any = 0;
+  private tempArray: any = [];
+  public chartData: Array<any> = [];
+  public barChartData: Array<any>  = [];
+  public barChartFlag: any = false;
+  constructor(private CalService: CalenderService, private grapData: GraphDataService) {
     this.getPrefData();
     this.getTableData();
+    this.getGraphData();
   }
   @ViewChild('someInput') el: ElementRef;
   public  dataColumns = [1];
-  public  barChartData = [{
+
+ public  barChartData1 = [{
       id: 0,
       label: '0',
       value1: 2,
@@ -47,10 +55,29 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
       value1: 2,
    }];
 
-   ngAfterViewInit() {
-     console.log(typeof document.querySelector('g.x.axis'));
-   }
+   ngAfterViewInit() {}
   ngOnInit() {
+  }
+  getGraphData() {
+    return this.grapData.graphData()
+    .subscribe(data => {
+       this.circleGraphData = data.Topic2;
+       this.chartData = data .Statistics;
+       this.chartData.forEach((item, index) => {
+        const arr = {
+          id: index,
+          label: index + '',
+          value1: item,
+        //  columnDetails: [undefined, undefined, {name: 'value1', column: 'column1', yBegin: 0, yEnd: item }],
+         // total: item,
+         };
+         this.tempArray.push(arr);
+         this.barChartData = this.tempArray;
+    });
+       console.log(this.barChartData);
+       console.log(this.barChartData1);
+       this.barChartFlag = true;
+     });
   }
   getPrefData() {
     this.prefData = JSON.parse(sessionStorage.getItem('pref'));
@@ -70,7 +97,6 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
   showDetails(event) {
     const target = event.target || event.srcElement || event.currentTarget;
     const idAttr = target.attributes.id.nodeValue;
-    console.log(idAttr);
   }
 }
 

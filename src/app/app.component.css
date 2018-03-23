@@ -25,9 +25,4 @@
 .legend rect{
     stroke-width: 2;
 }
-.tick{
-    display: none;
-}
-.domain{
-    display: none;
-}
+

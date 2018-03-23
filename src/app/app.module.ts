@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app.routing';
 import { CalenderHeaderComponent } from './components/calender-header/calender-header.component';
 import { CalenderNavigationComponent } from './components/calender-navigation/calender-navigation.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { GraphDataService } from './services/graph-data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       'clockwise': true
     }),
   ],
-  providers: [PreferencesService, CalenderService],
+  providers: [PreferencesService, CalenderService, GraphDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
