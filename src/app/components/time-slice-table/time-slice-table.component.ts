@@ -26,10 +26,12 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
   public barChartData: Array<any>  = [];
   public barChartFlag: any = false;
   public data: any = '';
+  public prevElem:any=null;;
   constructor(private CalService: CalenderService, private grapData: GraphDataService) {
     this.getPrefData();
     this.getTableData();
     this.getGraphData();
+    
   }
   @ViewChild('someInput') el: ElementRef;
   public  dataColumns = [1];
@@ -96,9 +98,15 @@ export class TimeSliceTableComponent implements OnInit , AfterViewInit {
       }   
      });
   }
-  showDetails(event) {
-    const target = event.target || event.srcElement || event.currentTarget;
-    const idAttr = target.attributes.id.nodeValue;
+  showDetails(event,elemId) {
+    if(this.prevElem!=null){
+      document.getElementById(this.prevElem).style.display='none';
+    }
+    document.getElementById(elemId).removeAttribute("style");
+    this.prevElem=elemId
+    console.log(elemId)
+   // this.temVar+=5
+    //this.circlePercent=10+this.temVar;
   }
 }
 

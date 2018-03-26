@@ -2,28 +2,30 @@
 <div class="container-fluid">
   <div class="row">
      <table class="calTable table">
-          <tr *ngFor='let events of keyArray;let i=index' >
+          <tr *ngFor="let events of keyArray;let i=index" >
             <table class="table">
               <tr class="grey-td">
-                  <th class='events'>
+                  <th class="events">
                       {{events}}
                    </th>
                    <ng-container *ngIf="i<1">
-                      <td *ngFor='let data of valueArray[i];let j=index' id='c{{i}}_r{{j}}' >
+                      <td *ngFor="let data of valueArray[i];let j=index" id="c{{i}}_r{{j}}" >
                           {{data}}
                         </td>
                    </ng-container>
                    
                    <ng-container *ngIf="i>0">
-                      <td *ngFor='let data of valueArray[i];let j=index' (click)='showDetails($event)' id='c{{i}}_r{{j}}' >
+                      <td *ngFor="let data of valueArray[i];let j=index" (click)="showDetails($event, ['c'+i+'_toogle'])"  id="c{{i}}_r{{j}}" >
                           {{data}}
                         </td>
                    </ng-container>
                    
               </tr>
-              <tr>
-              <td id='c_{{i}}_toogle' class="loader_div" colspan="30"> this is the graph area
-
+              <tr id="c{{i}}_toogle" class="loader_div" style="display:none">
+              <td colspan="30">
+                    <circle-progress
+                    [percent]="circleGraphData"
+                  ></circle-progress> 
                 </td>
               </tr>
             </table>
@@ -32,12 +34,10 @@
   </div>
 </div>
 
-  <circle-progress
-  [percent]="circleGraphData"
-></circle-progress> 
 
+<!-- 
  <div *ngIf="barChartFlag">
-<angular-d3-bar #someInput [id]="test2" class='chartDiv' [data]="barChartData" [dataColumns]="dataColumns" [colors]="colors"  [width]=400
-    [height]=200 [transitionDuration]=1000 [transitionDelay]=30 [barWidth]="'12px'"></angular-d3-bar>
+<angular-d3-bar #someInput [id]="test2" class="chartDiv" [data]="barChartData" [dataColumns]="dataColumns" [colors]="colors"  [width]=400
+    [height]=200 [transitionDuration]=1000 [transitionDelay]=30 [barWidth]=""12px""></angular-d3-bar>
 </div>
-
+ -->
